@@ -16,6 +16,12 @@ async function loadComponent(elementId, componentPath) {
                 assignDashboardLogout();
             }
         }
+
+        // Si es el footer, actualizar el logo según el tema actual
+        if (elementId === 'footer') {
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            updateFooterLogo(currentTheme);
+        }
     } catch (error) {
         console.error('Error al cargar el componente:', error);
     }
@@ -34,6 +40,7 @@ function initThemeToggle() {
     html.setAttribute('data-bs-theme', savedTheme);
     updateThemeIcon(icon, savedTheme);
     updateLogoVisibility(savedTheme);
+    updateFooterLogo(savedTheme);
 
     themeToggle.addEventListener('click', () => {
         const currentTheme = html.getAttribute('data-bs-theme');
@@ -43,6 +50,7 @@ function initThemeToggle() {
         localStorage.setItem('theme', newTheme);
         updateThemeIcon(icon, newTheme);
         updateLogoVisibility(newTheme);
+        updateFooterLogo(newTheme);
     });
 }
 
@@ -68,6 +76,18 @@ function updateLogoVisibility(theme) {
     } else {
         logoLight.style.display = 'inline-block';
         logoDark.style.display = 'none';
+    }
+}
+
+// Función para actualizar el logo del footer
+function updateFooterLogo(theme) {
+    const footerLogo = document.querySelector('.footer .footer-logo');
+    if (footerLogo) {
+        if (theme === 'dark') {
+            footerLogo.src = 'images/modo-oscuro.png';
+        } else {
+            footerLogo.src = 'images/modo-claro2.png';
+        }
     }
 }
 

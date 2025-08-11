@@ -1,18 +1,18 @@
 <!-- Footer -->
-<footer class="footer py-5 bg-light mt-5">
+<footer class="footer py-5 bg-light mt-5" data-theme-component="footer">
   <div class="container">
     <div class="row g-4 align-items-center justify-content-center text-center text-lg-start position-relative">
       <!-- Línea divisoria vertical -->
-      <div class="d-none d-lg-block" style="position:absolute;left:25%;top:0;height:calc(100% - 40px);width:1px;background:linear-gradient(to bottom,#004AAD22 0%,#004AAD66 100%);z-index:1;"></div>
+      <div class="d-none d-lg-block footer-divider" style="position:absolute;left:25%;top:0;height:calc(100% - 40px);width:1px;background:linear-gradient(to bottom,#004AAD22 0%,#004AAD66 100%);z-index:1;"></div>
       <div class="col-lg-3 d-flex flex-column align-items-center align-items-lg-end mb-4 mb-lg-0 pt-lg-2 justify-content-center" style="z-index:2;">
         <picture class="mb-2 w-100 d-flex justify-content-center align-items-center">
           <source srcset="images/modo-oscuro.png" media="(prefers-color-scheme: dark)">
-          <img src="images/modo-claro2.png" alt="Finx Logo" style="width:100%; max-width:170px; height:auto; display:block;">
+          <img src="images/modo-claro2.png" alt="Finx Logo" class="footer-logo" style="width:100%; max-width:170px; height:auto; display:block;">
         </picture>
         <span class="footer-desc fw-bold text-center mt-2" style="font-size:1.3rem;">Your financial education platform.<br>Learn, play, and grow with us.</span>
       </div>
       <div class="col-lg-3 d-flex flex-column align-items-center align-items-lg-start justify-content-center pt-lg-4 ps-lg-5" style="z-index:2;">
-        <h3 class="h5 mb-3 text-uppercase" style="letter-spacing:2.5px; margin-top:0; font-size:1.25rem;">Quick Links</h3>
+        <h3 class="h5 mb-3 text-uppercase footer-title" style="letter-spacing:2.5px; margin-top:0; font-size:1.25rem;">Quick Links</h3>
         <ul class="list-unstyled mb-0">
           <li><a href="index.html" class="footer-link">Home</a></li>
           <li><a href="about_us.html" class="footer-link">About Us</a></li>
@@ -20,15 +20,15 @@
         </ul>
       </div>
       <div class="col-lg-3 d-flex flex-column align-items-center align-items-lg-start justify-content-center pt-lg-4 ps-lg-5" style="z-index:2;">
-        <h3 class="h5 mb-3 text-uppercase" style="letter-spacing:2.5px; margin-top:0; font-size:1.25rem;">Contact</h3>
+        <h3 class="h5 mb-3 text-uppercase footer-title" style="letter-spacing:2.5px; margin-top:0; font-size:1.25rem;">Contact</h3>
         <ul class="list-unstyled mb-0">
-          <li class="mb-1"><i class="fas fa-envelope me-2"></i><span class="footer-link">example@finx.com</span></li>
-          <li class="mb-1"><i class="fas fa-phone me-2"></i><span class="footer-link">+1 234 567 8900</span></li>
-          <li><i class="fas fa-map-marker-alt me-2"></i><span class="footer-link">123 Main St, City, Country</span></li>
+          <li class="mb-1"><i class="fas fa-envelope me-2 footer-icon"></i><span class="footer-link">example@finx.com</span></li>
+          <li class="mb-1"><i class="fas fa-phone me-2 footer-icon"></i><span class="footer-link">+1 234 567 8900</span></li>
+          <li><i class="fas fa-map-marker-alt me-2 footer-icon"></i><span class="footer-link">123 Main St, City, Country</span></li>
         </ul>
       </div>
       <div class="col-lg-3 d-flex flex-column align-items-center align-items-lg-start justify-content-center pt-lg-4 ps-lg-5" style="z-index:2;">
-        <h3 class="h5 mb-3 text-uppercase" style="letter-spacing:2.5px; margin-top:0; font-size:1.25rem;">Follow Us</h3>
+        <h3 class="h5 mb-3 text-uppercase footer-title" style="letter-spacing:2.5px; margin-top:0; font-size:1.25rem;">Follow Us</h3>
         <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
           <a href="#" class="footer-social"><i class="fab fa-facebook fa-lg"></i></a>
           <a href="#" class="footer-social"><i class="fab fa-twitter fa-lg"></i></a>
@@ -37,9 +37,9 @@
         </div>
       </div>
     </div>
-    <hr class="my-2" style="border-color:#004AAD;">
+    <hr class="my-2 footer-hr" style="border-color:#004AAD;">
     <div class="text-center py-2">
-      <span class="text-muted" style="display:inline-block; margin-top:10px;">&copy; 2025 Finx. All rights reserved.</span>
+      <span class="text-muted footer-copyright" style="display:inline-block; margin-top:10px;">&copy; 2025 Finx. All rights reserved.</span>
     </div>
   </div>
 </footer>
@@ -70,6 +70,57 @@
   color: #004AAD;
   transform: translateY(-3px) scale(1.15);
 }
+
+/* Dark mode styles for footer */
+[data-bs-theme="dark"] .footer {
+  background-color: #1a1a1a !important;
+}
+
+[data-bs-theme="dark"] .footer .footer-link {
+  color: #e9ecef;
+}
+
+[data-bs-theme="dark"] .footer .footer-link:hover {
+  color: #4A90E2;
+}
+
+[data-bs-theme="dark"] .footer .footer-title {
+  color: white !important;
+}
+
+[data-bs-theme="dark"] .footer .footer-desc {
+  color: #e9ecef !important;
+}
+
+[data-bs-theme="dark"] .footer .footer-icon {
+  color: #e9ecef;
+}
+
+[data-bs-theme="dark"] .footer .footer-hr {
+  border-color: #4A90E2 !important;
+}
+
+[data-bs-theme="dark"] .footer .footer-copyright {
+  color: #adb5bd !important;
+}
+
+[data-bs-theme="dark"] .footer .footer-divider {
+  background: linear-gradient(to bottom, rgba(74, 144, 226, 0.2) 0%, rgba(74, 144, 226, 0.6) 100%) !important;
+}
+
+[data-bs-theme="dark"] .footer .footer-social {
+  color: #4A90E2;
+}
+
+[data-bs-theme="dark"] .footer .footer-social:hover {
+  color: #FFE066;
+}
+
+/* Dynamic logo switching */
+[data-bs-theme="dark"] .footer .footer-logo {
+  content: url('images/modo-oscuro.png') !important;
+}
+
 @media (max-width: 991.98px) {
   .footer .row > div {
     margin-bottom: 2rem;

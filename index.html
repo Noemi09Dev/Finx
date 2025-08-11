@@ -138,6 +138,10 @@
         }
 
         /* Subscription Plans Styles */
+        .subscription-section {
+            background: #e6f7f6;
+        }
+
         .subscription-plans-container {
             display: flex;
             justify-content: center;
@@ -160,6 +164,24 @@
             justify-content: space-between;
             overflow: hidden;
             position: relative;
+        }
+
+        [data-bs-theme="dark"] .plan-card {
+            background: #2d2d2d;
+            box-shadow: 0 4px 15px rgba(255,255,255,0.08);
+        }
+
+        [data-bs-theme="dark"] .plan-card ul li {
+            color: white;
+        }
+
+        [data-bs-theme="dark"] .subscription-section {
+            background: #1a1a1a !important;
+        }
+
+        [data-bs-theme="dark"] .subscription-section h2,
+        [data-bs-theme="dark"] .subscription-section p {
+            color: white !important;
         }
 
         .plan-card:hover {
@@ -315,9 +337,33 @@
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         }
 
+        [data-bs-theme="dark"] .newsletter-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+        }
+
+        [data-bs-theme="dark"] .newsletter-section h2 {
+            color: white !important;
+        }
+
         .newsletter-form .form-control:focus {
             border-color: #11254b !important;
             box-shadow: 0 0 0 0.2rem rgba(17, 37, 75, 0.25) !important;
+        }
+
+        [data-bs-theme="dark"] .newsletter-form .form-control {
+            background-color: #333 !important;
+            border-color: #555 !important;
+            color: white !important;
+        }
+
+        [data-bs-theme="dark"] .newsletter-form .form-control::placeholder {
+            color: #ccc !important;
+        }
+
+        [data-bs-theme="dark"] .newsletter-form .form-control:focus {
+            background-color: #444 !important;
+            border-color: #11254b !important;
+            color: white !important;
         }
 
         .newsletter-form .btn:hover {
@@ -331,6 +377,10 @@
             box-shadow: 0 4px 16px rgba(0,0,0,0.1);
             border-radius: 50px;
             overflow: hidden;
+        }
+
+        [data-bs-theme="dark"] .newsletter-form .input-group {
+            box-shadow: 0 4px 16px rgba(255,255,255,0.1);
         }
 
         /* Estilos unificados para todos los botones */
@@ -485,6 +535,16 @@
         [data-bs-theme="dark"] .particle-img {
             border: 3px solid #fff;
         }
+
+        /* Features Section Dark Mode */
+        [data-bs-theme="dark"] .features {
+            background-color: #1a1a1a;
+        }
+
+        [data-bs-theme="dark"] .features h2 {
+            color: white !important;
+        }
+
         .features-beautiful-section {
             background: #f8fafc;
             border-radius: 2.2rem;
@@ -495,6 +555,21 @@
             transition: box-shadow 0.3s;
             color: #23272b;
         }
+
+        [data-bs-theme="dark"] .features-beautiful-section {
+            background: #2d2d2d;
+            box-shadow: 0 8px 32px rgba(255,255,255,0.10);
+            color: #e9ecef;
+        }
+
+        [data-bs-theme="dark"] .features-beautiful-section:hover {
+            box-shadow: 0 16px 48px rgba(255,255,255,0.16);
+        }
+
+        [data-bs-theme="dark"] .features-beautiful-section p {
+            color: #e9ecef !important;
+        }
+
         .features-beautiful-section:hover {
             box-shadow: 0 16px 48px rgba(17,37,75,0.16);
         }
@@ -916,7 +991,7 @@
     </section>
 
     <!-- Subscription Plans Section -->
-    <section class="subscription-section py-5" id="subscription" data-aos="fade-up" style="background: #e6f7f6;">
+    <section class="subscription-section py-5" id="subscription" data-aos="fade-up">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-down">
                 <h2 class="display-4 fw-bold title-font" style="text-align: center !important; max-width:600px; margin:0 auto;">Suscriptions</h2>
@@ -1036,7 +1111,7 @@
     </div>
 
     <!-- Newsletter Subscription Section -->
-    <section class="newsletter-section py-5" id="newsletter" data-aos="fade-up" style="background: #f8f9fa;">
+    <section class="newsletter-section py-5" id="newsletter" data-aos="fade-up">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
